@@ -6,7 +6,9 @@ use Liberu\Accounting\ClientCollaborationLivewire\ClientCollaborationLivewireSer
 
 it('boots accounting-client-collaboration-livewire service provider', function (): void {
     $provider = $this->app->register(ClientCollaborationLivewireServiceProvider::class, force: true);
-    if (method_exists($provider, 'boot')) { $provider->boot(); }
+    if (method_exists($provider, 'boot')) {
+        $provider->boot();
+    }
 
     expect($provider)->toBeInstanceOf(ClientCollaborationLivewireServiceProvider::class);
 });
